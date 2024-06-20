@@ -1,5 +1,5 @@
 #[macro_use]
-extern crate diesel;
+// extern crate diesel;
 extern crate dotenv;
 
 mod config;
@@ -21,13 +21,13 @@ use teloxide::prelude::*;
 use config::Config;
 use logging::init_logger;
 use std::sync::Arc;
-use database::establish_connection_pool;
+// use database::establish_connection_pool;
 
 #[tokio::main]
 async fn main() {
     dotenv::dotenv().ok();
     let _ = init_logger();
-    let pool = Arc::new(establish_connection_pool());
+    // let pool = Arc::new(establish_connection_pool());
     let config = Arc::new(Config::from_env().expect("Failed to load configuration"));
     let commands = Arc::new(keyboards::load_commands_with_emoji("commands.yaml"));
     let openai_recognizer = Arc::new(
@@ -41,10 +41,17 @@ async fn main() {
         let config = Arc::clone(&config);
         let commands = Arc::clone(&commands);
         let openai_recognizer = Arc::clone(&openai_recognizer);
-        let pool = Arc::clone(&pool);
+        // let pool = Arc::clone(&pool);
 
         async move {
-            let _ = routes::handle_message(bot, message, config, commands, openai_recognizer, pool).await;
+            let _ = routes::handle_message(
+                bot, 
+                message, 
+                config, 
+                commands, 
+                openai_recognizer, 
+                // pool
+            ).await;
             respond(())
         }
     })
