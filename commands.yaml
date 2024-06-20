@@ -1,0 +1,121 @@
+🐶 Dog:
+  url: 'https://api.thedogapi.com/v1/images/search'
+  log_action: 'dog'
+  error_msg: 'Failed to get a dog photo. Error: {e}'
+
+🐱 Cat:
+  url: 'https://api.thecatapi.com/v1/images/search'
+  log_action: 'cat'
+  error_msg: 'Failed to get a cat photo. Error: {e}'
+
+🚗 Car:
+  url: 'https://api.pexels.com/v1/search?query=car&per_page=10000'
+  log_action: 'vehicle'
+  error_msg: 'Failed to get a vehicle photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+
+Vehicle:
+  url: 'https://api.pexels.com/v1/search?query=vehicle&per_page=10000'
+  log_action: 'Vehicle'
+  error_msg: 'Failed to get a vehicle photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+
+🏍️ Motorcycle:
+  url: 'https://api.pexels.com/v1/search?query=motorcycle&per_page=10000'
+  log_action: 'motorcycle'
+  error_msg: 'Failed to get a motorcycle photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#🛥️
+Boat:
+  url: 'https://api.pexels.com/v1/search?query=boat&per_page=10000'
+  log_action: 'boat'
+  error_msg: 'Failed to get a boat photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#🛳️
+Yacht:
+  url: 'https://api.pexels.com/v1/search?query=yacht&per_page=10000'
+  log_action: 'Yacht'
+  error_msg: 'Failed to get a yacht photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#🚢
+Ship:
+  url: 'https://api.pexels.com/v1/search?query=ship&per_page=10000'
+  log_action: 'Ship'
+  error_msg: 'Failed to get a ship photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#✈️
+Airplane:
+  url: 'https://api.pexels.com/v1/search?query=airplane&per_page=10000'
+  log_action: 'Airplane'
+  error_msg: 'Failed to get an airplane photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#🏰
+Castle:
+  url: 'https://api.pexels.com/v1/search?query=castle&per_page=10000'
+  log_action: 'Castle'
+  error_msg: 'Failed to get a castle photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+
+🐴 Horse:
+  url: 'https://api.pexels.com/v1/search?query=horse&per_page=10000'
+  log_action: 'horse'
+  error_msg: 'Failed to get a horse photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#🐟
+Fish:
+  url: 'https://api.pexels.com/v1/search?query=fish&per_page=10000'
+  log_action: 'fish'
+  error_msg: 'Failed to get a fish photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+
+🌌 Space:
+  url: 'https://api.pexels.com/v1/search?query=space&per_page=10000'
+  log_action: 'space'
+  error_msg: 'Failed to get a space photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#Nature
+🌳 Garden:
+  url: 'https://api.pexels.com/v1/search?query=garden&per_page=10000'
+  log_action: 'garden'
+  error_msg: 'Failed to get a garden photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+
+🌊 Ocean:
+  url: 'https://api.pexels.com/v1/search?query=deepsea&per_page=10000'
+  log_action: 'ocean'
+  error_msg: 'Failed to get an underwater photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#🐠
+Underwater:
+  url: 'https://api.pexels.com/v1/search?query=underwater&per_page=10000'
+  log_action: 'Underwater'
+  error_msg: 'Failed to get an underwater photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+#👩
+Girl:
+  url: 'https://api.pexels.com/v1/search?query=girl&per_page=10000'
+  log_action: 'Girl'
+  error_msg: 'Failed to get a girl photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'
+# Adventures Peaks Trails Climb Summit 
+🏔 Mountain:
+  url: 'https://api.pexels.com/v1/search?query=mountain&per_page=10000'
+  log_action: 'mountain'
+  error_msg: 'Failed to get a mountain photo. Error: {e}'
+  headers:
+    Authorization: 'API_KEY_PLACEHOLDER'

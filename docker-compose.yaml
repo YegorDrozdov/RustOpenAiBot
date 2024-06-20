@@ -1,0 +1,65 @@
+services:
+#   bot:
+#     build:
+#       context: ./snapbot
+#       dockerfile: Dockerfile
+#     container_name: bot
+#     env_file:
+#       - .env
+# #    volumes:
+# #      - .:/app
+# #    ports:
+# #      - "${BOT_PORT}:${BOT_PORT}"
+#     depends_on:
+#       - database
+#       - storage
+#     networks:
+#       - bot_net
+
+  database:
+    image: postgres:alpine
+    container_name: database
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    command: ["postgres", "-c", "port=${DB_PORT}"]
+    volumes:
+      - database_vol:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    networks:
+      - bot_net
+
+  # storage:
+  #   image: 'bitnami/minio:latest'
+  #   container_name: storage
+  #   ports:
+  #     - '${S3_API}:${S3_API_PORT}'  # Api
+  #     - '${S3_WEB}:${S3_WEB_PORT}'  # webUI
+  #   volumes:
+  #     - storage_vol:/bitnami/minio/data
+  #   environment:
+  #     MINIO_ROOT_USER: ${S3_USER}
+  #     MINIO_ROOT_PASSWORD: ${S3_PASSWORD}
+  #   networks:
+  #     - bot_net
+
+  # nginx:
+  #   container_name: nginx
+  #   build: ./nginx
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - '${NGINX_PORT}:${NGINX_PORT}'
+  #   depends_on:
+  #     - bot
+  #   networks:
+  #     - bot_net
+
+volumes:
+  database_vol: {}
+  storage_vol: {}
+
+networks:
+  bot_net:
+    driver: bridge
